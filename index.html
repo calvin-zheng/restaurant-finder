@@ -31,6 +31,11 @@
             <h3>{{ .Name }}</h3>
             <p>Review Count: {{ .ReviewCount }}</p>
             <p>Price: {{ .Price }}</p>
+            <div class = "transaction-box">
+                {{range .Transactions}}
+                        <p class = "transactions">{{ . }}</p>
+                {{end}}
+            </div>
         </a>
     </div>
     {{ end }}

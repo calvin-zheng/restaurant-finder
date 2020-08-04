@@ -94,6 +94,16 @@ type Business struct {
 		Address1 string `json:"address1"`
 		ZipCode  string `json:"zip_code"`
 	} `json:"location"`
+	Hours  []struct {
+		Open []struct {
+			IsOvernight bool   `json:"is_overnight"`
+			Start       string `json:"start"`
+			End         string `json:"end"`
+			Day         int    `json:"day"`
+		} `json:"open"`
+		HoursType string `json:"hours_type"`
+		IsOpenNow bool   `json:"is_open_now"`
+	} `json:"hours"`
 	Distance     float64  `json:"distance"`
 	Transactions []string `json:"transactions"`
 }
